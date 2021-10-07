@@ -18,4 +18,11 @@
     <string name="toggle_open">Open</string>
     <string name="toggle_close">Close</string>
 
+    <!-- Cadastro de usuarios -->
+    <string name="user_register_cadastrar">CADASTRAR</string>
+    <string name="user_register_senha">Senha</string>
+    <string name="user_register_email">Email</string>
+    <string name="user_register_nome">Nome</string>
+    <string name="user_register_title">Cadastro de Usuário</string>
+
 </resources>
