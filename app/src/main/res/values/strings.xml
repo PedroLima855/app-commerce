@@ -25,4 +25,11 @@
     <string name="user_register_nome">Nome</string>
     <string name="user_register_title">Cadastro de Usuário</string>
 
+    <!-- Login dos usuarios -->
+    <string name="user_login_esqueceu_sua_senha">Esqueceu sua senha?</string>
+    <string name="user_login_entrar">ENTRAR</string>
+    <string name="user_login_nao_possui_cadastro">Não possui cadastro?</string>
+    <string name="user_login_cadastre_se_aqui">cadastre-se aqui</string>
+    <string name="user_login_title">Login</string>
+
 </resources>

@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var drawerLayout: DrawerLayout;
     lateinit var navigationView: NavigationView;
     lateinit var textTitle: TextView;
+    lateinit var textLogin: TextView;
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +49,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val productItem: LinearLayout = findViewById(R.id.ll_product_item)
         productItem.setOnClickListener{
             val intent: Intent = Intent(this, ProductDetailActivity::class.java)
+            startActivity(intent)
+        }
+
+        textLogin = navigationView.getHeaderView(0).findViewById(R.id.header_profile_name)
+        textLogin.setOnClickListener{
+            val intent: Intent = Intent(this, UserLoginActivity::class.java)
             startActivity(intent)
         }
 
