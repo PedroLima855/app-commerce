@@ -35,6 +35,6 @@ class UserLoginActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
-        return true;
+        return true
     }
 }
