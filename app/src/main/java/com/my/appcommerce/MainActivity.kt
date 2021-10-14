@@ -11,7 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
+import com.my.appcommerce.adapter.ProductCategoryAdapter
+import com.my.appcommerce.model.ProductCategory
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -21,6 +25,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var navigationView: NavigationView;
     lateinit var textTitle: TextView;
     lateinit var textLogin: TextView;
+    lateinit var recyclerCategory: RecyclerView;
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +63,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             startActivity(intent)
         }
 
+        recyclerCategory = findViewById(R.id.rv_main_product_category)
+
+        val arrayCategory = arrayListOf<ProductCategory>(
+            ProductCategory(id = "1", title = "Camisetas"),
+            ProductCategory(id = "2", title = "Calças"),
+            ProductCategory(id = "3", title = "Tenis"),
+            ProductCategory(id = "4", title = "Biquinis"),
+            ProductCategory(id = "5", title = "Sapatos"),
+            ProductCategory(id = "6", title = "Eletrônicos"),
+            ProductCategory(id = "7", title = "Eletrodomesticos"),
+            ProductCategory(id = "8", title = "Games"),
+            ProductCategory(id = "9", title = "Filmes"),
+            ProductCategory(id = "10", title = "Livros")
+        )
+
+        val adapterCategory = ProductCategoryAdapter(arrayCategory, this)
+
+        recyclerCategory.adapter = adapterCategory
+        recyclerCategory.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     override fun onBackPressed() {
