@@ -43,6 +43,7 @@
     <string name="user_profile_city">Cidade</string>
     <string name="user_profile_cep">CEP</string>
     <string name="user_profile_button_update">ATUALIZAR</string>
+    <string name="product_dategory_title">Categorias</string>
     <string-array name="states">
         <item>Acre (AC)</item>
         <item>Alagoas (AL)</item>
