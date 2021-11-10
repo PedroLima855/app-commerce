@@ -37,9 +37,9 @@
                 android:adjustViewBounds="true"/>
 
             <TextView
+                android:id="@+id/tv_product_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="R$ 89,90"
                 android:textAppearance="@android:style/TextAppearance.Small"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"/>
@@ -58,42 +58,6 @@
                 android:layout_height="wrap_content"
                 app:singleSelection="true">
 
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Branco"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Preto"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Azul"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="Cinza"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
             </com.google.android.material.chip.ChipGroup>
 
             <TextView
@@ -110,42 +74,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:singleSelection="true">
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="PP"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="P"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="M"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="G"
-                    android:checkable="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"/>
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -166,9 +94,9 @@
                 android:layout_marginTop="8dp"/>
 
             <TextView
+                android:id="@+id/tv_product_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aqui será a descrição completa do produto inserido, que pode conter um texto grande"
                 android:textAppearance="@android:style/TextAppearance.Small"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"/>

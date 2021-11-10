@@ -1,5 +1,7 @@
 package com.my.appcommerce.model
 
+import java.io.Serializable
+
 data class Product (
     val id: String,
     val title: String,
@@ -9,4 +11,4 @@ data class Product (
     val colors: List<ProductColor>,
     val size: List<ProductSize>,
     val images: List<ProductImage>
-    )
+    ) : Serializable
