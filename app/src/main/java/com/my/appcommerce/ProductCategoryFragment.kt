@@ -24,16 +24,16 @@ class ProductCategoryFragment : Fragment() {
         recyclerCategory = view.findViewById(R.id.rv_product_category)
 
         val arrayCategory = arrayListOf<ProductCategory>(
-            ProductCategory(id = "1", title = "Camisetas"),
-            ProductCategory(id = "2", title = "Calças"),
-            ProductCategory(id = "3", title = "Tenis"),
-            ProductCategory(id = "4", title = "Biquinis"),
-            ProductCategory(id = "5", title = "Sapatos"),
-            ProductCategory(id = "6", title = "Eletrônicos"),
-            ProductCategory(id = "7", title = "Músicas"),
-            ProductCategory(id = "8", title = "Games"),
-            ProductCategory(id = "9", title = "Filmes"),
-            ProductCategory(id = "10", title = "Livros")
+            ProductCategory(id = "1", title = "Camisetas", MainActivity().fillRvProduct()),
+            ProductCategory(id = "2", title = "Calças", MainActivity().fillRvProduct()),
+            ProductCategory(id = "3", title = "Tenis", MainActivity().fillRvProduct()),
+            ProductCategory(id = "4", title = "Biquinis", MainActivity().fillRvProduct()),
+            ProductCategory(id = "5", title = "Sapatos", MainActivity().fillRvProduct()),
+            ProductCategory(id = "6", title = "Eletrônicos", MainActivity().fillRvProduct()),
+            ProductCategory(id = "7", title = "Músicas", MainActivity().fillRvProduct()),
+            ProductCategory(id = "8", title = "Games", MainActivity().fillRvProduct()),
+            ProductCategory(id = "9", title = "Filmes", MainActivity().fillRvProduct()),
+            ProductCategory(id = "10", title = "Livros", MainActivity().fillRvProduct())
         )
 
         val adapterCategory = ProductCategoryAdapter(arrayCategory, requireContext())
@@ -42,6 +42,10 @@ class ProductCategoryFragment : Fragment() {
         recyclerCategory.layoutManager = GridLayoutManager(requireContext(), 2)
 
         return view;
+    }
+
+    interface CallBack{
+        fun itemSelected(category: ProductCategory)
     }
 
 }

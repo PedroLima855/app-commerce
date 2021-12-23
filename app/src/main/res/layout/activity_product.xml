@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProductCategoryActivity">
+    tools:context=".ProductActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -18,26 +18,10 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <FrameLayout
+        android:id="@+id/fragment_product"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <fragment
-            android:id="@+id/fragment_product_category"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:layout="@layout/fragment_product_category"/>
-
-        <FrameLayout
-            android:id="@+id/fragment_product"
-            android:name="com.my.appcommerce.ProductFragment"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            tools:layout = "@layout/fragment_product"/>
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_product"/>
 
 </LinearLayout>

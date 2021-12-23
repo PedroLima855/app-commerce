@@ -22,7 +22,7 @@ import com.my.appcommerce.model.ProductColor
 import com.my.appcommerce.model.ProductSize
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ProductCategoryFragment.CallBack {
 
     lateinit var toolbar: Toolbar;
     lateinit var drawerLayout: DrawerLayout;
@@ -64,16 +64,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         recyclerCategory = findViewById(R.id.rv_main_product_category)
 
         val arrayCategory = arrayListOf<ProductCategory>(
-            ProductCategory(id = "1", title = "Camisetas"),
-            ProductCategory(id = "2", title = "Calças"),
-            ProductCategory(id = "3", title = "Tenis"),
-            ProductCategory(id = "4", title = "Biquinis"),
-            ProductCategory(id = "5", title = "Sapatos"),
-            ProductCategory(id = "6", title = "Eletrônicos"),
-            ProductCategory(id = "7", title = "Eletrodomesticos"),
-            ProductCategory(id = "8", title = "Games"),
-            ProductCategory(id = "9", title = "Filmes"),
-            ProductCategory(id = "10", title = "Livros")
+            ProductCategory(id = "1", title = "Camisetas", fillRvProduct()),
+            ProductCategory(id = "2", title = "Calças", fillRvProduct()),
+            ProductCategory(id = "3", title = "Tenis", fillRvProduct()),
+            ProductCategory(id = "4", title = "Biquinis", fillRvProduct()),
+            ProductCategory(id = "5", title = "Sapatos", fillRvProduct()),
+            ProductCategory(id = "6", title = "Eletrônicos", fillRvProduct()),
+            ProductCategory(id = "7", title = "Eletrodomesticos", fillRvProduct()),
+            ProductCategory(id = "8", title = "Games",fillRvProduct()),
+            ProductCategory(id = "9", title = "Filmes", fillRvProduct()),
+            ProductCategory(id = "10", title = "Livros", fillRvProduct())
         )
 
         val adapterCategory = ProductCategoryAdapter(arrayCategory, this)
@@ -146,5 +146,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.closeDrawer(GravityCompat.START)
 
         return true;
+    }
+
+    override fun itemSelected(category: ProductCategory) {
+        val intent = Intent(this, ProductActivity::class.java)
+        intent.putExtra("CATEGORY", category)
+        startActivity(intent)
     }
 }
