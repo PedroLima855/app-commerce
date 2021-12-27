@@ -24,7 +24,7 @@ class ProductDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_product_detail)
+        setContentView(R.layout.activity_product_detail_const)
 
         product = intent.getSerializableExtra("PRODUCT") as Product
 
@@ -40,7 +40,7 @@ class ProductDetailActivity : AppCompatActivity() {
         productPrice = findViewById(R.id.tv_product_price)
         productPrice.text = "R$ ${product.price}"
 
-        productDesc = findViewById(R.id.tv_product_desc)
+        productDesc = findViewById(R.id.tv_label_description)
         productDesc.text = product.description
 
         chipGroupColor = findViewById(R.id.chip_group_color)
